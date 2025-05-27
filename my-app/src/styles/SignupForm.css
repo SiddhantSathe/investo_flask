@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .signup-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #fff7ed, #f8fafc);
+  }
+  
+  /* Card styles */
+  .signup-card {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-right: 260px;
+  }
+  
+  .card-header {
+    padding: 24px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #0e0e0e;
+    margin-bottom: 8px;
+  }
+  
+  .card-description {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .card-content {
+    padding: 24px;
+  }
+  
+  .card-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Progress bar */
+  .progress-container {
+    height: 8px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #0e0e0e;
+    transition: width 0.3s ease;
+  }
+
+  .step-indicators {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .step-indicators span.active {
+    color: #0e0e0e;
+    font-weight: 500;
+  }
+  .form-step {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+    background-color: #ddd;
+    color: #0e0e0e;
+  }
+  
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: #0e0e0e;
+    box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.1);
+  }
+  
+  input:disabled,
+  select:disabled,
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .file-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+  }
+  
+  .file-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+  }
+  
+  .file-input::-webkit-file-upload-button {
+    background-color: #fff2e8;
+    color: #0e0e0e;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 16px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .upload-icon {
+    position: absolute;
+    right: 12px;
+    color: #999;
+  }
+  
+  .helper-text {
+    font-size: 12px;
+    color: #777;
+    margin-top: 4px;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: #0e0e0e;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #084f82;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #555;
+  }
+  
+  .btn-outline:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Alerts */
+  .alert {
+    margin: 0 24px 16px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .alert.error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+  }
+  
+  .alert.success {
+    background-color: #dcfce7;
+    color: #010416;
+    border: 1px solid #bbf7d0;
+  }
+  
+  .alert svg {
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 600px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  
+    .card-footer {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .card-footer button {
+      width: 100%;
+    }
+  
+    .btn {
+      padding: 12px;
+    }
+  }
+  
+  

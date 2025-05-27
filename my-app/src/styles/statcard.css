@@ -1,0 +1,66 @@
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 200px;
+  }
+  
+  .stat-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .stat-card-title {
+    font-size: 13px;
+    color: #64748b;
+  }
+  
+  .stat-card-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111827;
+  }
+  
+  .stat-card-period {
+    font-size: 11px;
+    color: #6b7280;
+  }
+  
+  .stat-change {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 999px;
+    align-self: flex-start;
+  }
+  
+  .positive {
+    background: #d1fae5;
+    color: #22c55e;
+  }
+  
+  .negative {
+    background: #fee2e2;
+    color: #ef4444;
+  }
+  
+  /* Chart Container */
+  .stat-chart {
+    margin-top: 10px;
+    height: 40px;
+    position: relative;
+  }
+  
+  /* Chart points (hover effect) */
+  .chart-point {
+    transition: r 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .chart-point:hover {
+    r: 5;
+  }
+  

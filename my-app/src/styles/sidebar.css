@@ -1,0 +1,143 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 206px;
+    background-color: #eceff8;
+    color: rgb(7, 0, 0);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .sidebar-header {
+    padding: 16px;
+    border-bottom: 1px solid #dae1f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .sidebar-title {
+    font-weight: 500;
+    font-size: 0.7 rem;
+  }
+  
+  .sidebar-subtitle {
+    font-size: 0.5rem;
+    color: #93c5fd;
+  }
+  
+  .sidebar-menu-button {
+    color: #93c5fd;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: none;
+  }
+  
+  .sidebar-menu-button:hover {
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: none;
+  }
+  
+  .sidebar-nav {
+    flex: 1;
+    
+    padding-top: 10px;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px 0;
+    padding: 0 14px;
+  }
+  .nav-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    font-size: 13px; /* Adjust the size as needed */
+    font-weight: bold;
+    color: #333; /* Optional: Change text color */
+  }
+  
+  .nav-list li:hover {
+    font-size: 13px; /* Slightly increase font size on hover */
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    
+    color: rgb(2, 0, 0);
+    text-decoration: none;
+    
+  }
+  
+  .nav-item:hover {
+    background-color: #d5def1;
+    color: #3d3e41;
+  }
+  
+  .nav-item.active {
+    background-color: #d9def3;
+    color: #434446;
+  }
+  
+  .sidebar-section {
+    margin-top: 32px;
+  }
+  
+  .sidebar-footer {
+    padding: 16px;
+    border-top: 1px solid #1e40af;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #1d4ed8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-weight: 600;
+  }
+  
+  .user-info {
+    flex: 1;
+  }
+  
+  .user-name {
+    font-weight: 450;
+    font-size: 0.9rem;
+  }
+  
+  .user-email {
+    font-size: 0.7rem;
+    color: #031b37;
+  }
+  
+  .user-menu-button {
+    color: #93c5fd;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .user-menu-button:hover {
+    color: white;
+  }
+  
+  

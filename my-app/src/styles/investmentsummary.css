@@ -1,0 +1,162 @@
+/* Investment Summary Styles */
+.investment-summaryy {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    width: 500px;
+  }
+  
+  .investment-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .investment-summary-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin: 0 0 4px 0;
+  }
+  
+  .investment-summary-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .total-value {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .value-change {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .value-change.positive {
+    background-color: #dcfce7;
+    color: #16a34a;
+  }
+  
+  .value-change.negative {
+    background-color: #fee2e2;
+    color: #dc2626;
+  }
+  
+  .investment-summary-period {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin: 0;
+  }
+  
+  .investment-metrics {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .investment-metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .metric-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .metric-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .metric-indicator.blue {
+    background-color: #3b82f6;
+  }
+  
+  .metric-indicator.green {
+    background-color: #22c55e;
+  }
+  
+  .metric-indicator.red {
+    background-color: #ef4444;
+  }
+  
+  .metric-indicator.purple {
+    background-color: #a855f7;
+  }
+  
+  .metric-value {
+    font-weight: 500;
+  }
+  
+  .metric-value.positive {
+    color: #16a34a;
+  }
+  
+  .metric-value.negative {
+    color: #dc2626;
+  }
+  
+  .investment-chart-container {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .investment-chart {
+    height: 160px;
+    width: 100%;
+    background: linear-gradient(to bottom, #eff6ff, #dbeafe);
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .area-chart {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .area-path {
+    fill: rgba(59, 130, 246, 0.5);
+    stroke: #3b82f6;
+    stroke-width: 0.5;
+  }
+  
+  .chart-grid {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .chart-grid-line {
+    width: 100%;
+    height: 0;
+    border-top: 1px dashed #e5e7eb;
+  }
+  
+  .chart-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+  
+  
