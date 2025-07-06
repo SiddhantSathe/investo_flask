@@ -25,4 +25,4 @@ def get_insurance_data():
         print(f"Error fetching insurance data: {e}")
         return []  # Return an empty list on error
     
-print(get_insurance_data())
+# print(get_insurance_data())

@@ -55,7 +55,7 @@ const BondsList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/bonds/") // Django API URL
+    fetch("http://127.0.0.1:5000/bonds/")
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "ok" && data.result?.list) {
@@ -68,7 +68,7 @@ const BondsList = () => {
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">📊 Available Bonds</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Available Bonds</h2>
 
       {loading ? (
         <p className="text-center text-gray-500">Loading bonds...</p>
