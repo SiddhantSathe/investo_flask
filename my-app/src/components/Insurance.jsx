@@ -68,7 +68,7 @@ const Insurance = () => {
     const [policies, setPolicies] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5500/api/insurance")
+        axios.get("http://localhost:5000/insurance")
             .then(response => {
                 setPolicies(response.data);
             })
