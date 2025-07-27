@@ -4,7 +4,14 @@ from api.gemini import generate
 from api.insurance import get_insurance_data
 from api.finnhub import get_finnhub_api_key
 from api.bonds import get_bonds_data
+from login import save_uploaded_file
+from login import extract_text_from_image
+from login import is_valid_document
+from login import clean_name
 
+import google.generativeai as genai
+import re
+from pymongo import MongoClient
 import requests
 import os   
 from dotenv import load_dotenv
@@ -14,6 +21,41 @@ app = Flask(__name__)
 CORS(app , supports_credentials=True, resources={r"/*": {"origins": "*"}})
 
 finnhub_client = get_finnhub_api_key()
+
+FLASK_SERVER_URL = "http://127.0.0.1:5500/verify-documents" 
+
+@app.route('/signup', methods=['POST'])
+def signup():
+    data = request.form
+    pan_card = request.files.get("pan_card")
+    aadhaar_card = request.files.get("aadhaar_card")
+
+    if not pan_card or not aadhaar_card:
+        return jsonify({"message": "PAN and Aadhaar required"}), 400
+
+    files = {
+        "pan_card": (pan_card.filename, pan_card.stream, pan_card.mimetype),
+        "aadhaar_card": (aadhaar_card.filename, aadhaar_card.stream, aadhaar_card.mimetype)
+    }
+    payload = {"username": data.get("username", "").strip()}
+
+    try:
+        response = requests.post(FLASK_SERVER_URL, files=files, data=payload)
+        result = response.json()
+
+        if response.status_code != 200 or result.get("status") != "verified":
+            return jsonify({"message": "Verification failed. " + result.get("reason", "Unknown error")}), 400
+
+        # Replace this with your user creation logic
+
+        # For example, save_user_to_db(data)
+
+        print("User created successfully:", payload["username"])
+        return jsonify({"message": "User registered successfully!"}), 201
+
+    except requests.exceptions.RequestException as e:
+        return jsonify({"error": "Flask server error: " + str(e)}), 500
+
 
 @app.route('/bonds/', methods=['GET'])
 def bonds():
