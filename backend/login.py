@@ -10,8 +10,8 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-# API_KEY = os.getenv("GEMINI_API_KEY")
-API_KEY = "AIzaSyAUAZoG80UGIGw1JG9u_0h7VH8btF97w5Y"
+API_KEY = os.getenv("GEMINI_API_KEY")
+
 
 if not API_KEY:
     raise ValueError("API Key is missing! Please set GOOGLE_API_KEY in the .env file.")
